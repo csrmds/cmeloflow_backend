@@ -11,6 +11,7 @@ const clientRoutes = require('./routes/clientRoutes');
 const workflowRoutes = require('./routes/workflowRoutes');
 const sessionRoutes = require('./routes/sessionRoutes')
 const calendarRoutes = require('./routes/calendarRoutes')
+const logRoutes = require('./routes/logRoutes');
 
 //CONFIG LOGGER
 //app.use(pinoHttp({ logger }));
@@ -39,6 +40,7 @@ app.use('/clients', clientRoutes);
 app.use('/workflow', workflowRoutes);
 app.use('/session', sessionRoutes)
 app.use('/calendar', calendarRoutes)
+app.use('/logs', logRoutes);
 
 
 app.get('/teste', (req, res) => {
